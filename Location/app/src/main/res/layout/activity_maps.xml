@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#FEFFFF"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="360dp"
+        android:elevation="45dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="230dp"
+        android:orientation="vertical"
+        android:background="@drawable/slider_background"
+        android:padding="16dp">
+
+
+        <Button
+            android:id="@+id/requesBTN"
+            android:background="@drawable/slider_background2"
+           android:layout_marginLeft="30dp"
+            android:textColor="#595E59"
+            android:elevation="25dp"
+            android:textSize="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="get new request" />
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:id="@+id/weather"
+
+            android:textStyle="italic"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:id="@+id/address"
+            android:textStyle="italic"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:id="@+id/coordinates"
+            android:textStyle="italic"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+
+
+
+
+
+    </LinearLayout>
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:background="@drawable/slider_background2"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="250dp"
+        tools:context=".MapsActivity" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>
